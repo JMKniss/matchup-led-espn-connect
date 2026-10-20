@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Matchup LED - ESPN Connect - privacy</title>
+<style>
+body{max-width:640px;margin:40px auto;padding:0 20px;font:16px/1.55 system-ui,sans-serif;color:#222}
+h1{font-size:22px}h2{font-size:17px;margin-top:28px}code{background:#f2f2f2;padding:1px 5px}
+</style>
+</head>
+<body>
+<h1>Matchup LED - ESPN Connect: privacy, in plain words</h1>
+<p>This browser extension exists for one job: to move your ESPN fantasy sign-in from your browser to your Matchup LED scoreboard on your home Wi-Fi, so the board can show your private leagues. It was written to be as small and as checkable as possible.</p>
+
+<h2>What it reads</h2>
+<p>Two cookies that ESPN already placed in your browser when you signed in to espn.com: <code>SWID</code> and <code>espn_s2</code>. Together they are a session key to your ESPN account, the same thing the ESPN website uses to know it is you. The extension reads them only while its little window is open. It cannot see anything on any other website, and it does not see or ask for your ESPN password.</p>
+
+<h2>Where it sends them</h2>
+<p>Only to the scoreboard address you type into the window, on your own network, by opening that address in a new browser tab. The cookies ride in the part of the address after the <code>#</code> sign, which browsers never send over the network; your scoreboard's own setup page reads them, asks you to confirm, saves them in the board, and clears them from the address bar. The maker of Matchup LED never receives them. There is no server, no account, no analytics, no telemetry, no crash reporting and no update check inside this extension.</p>
+
+<h2>What it stores</h2>
+<p>The scoreboard address you typed, so you do not have to type it again next year. Nothing else. The cookies themselves are not kept by the extension.</p>
+
+<h2>Permissions, and why</h2>
+<p><b>cookies</b> and <b>host access to *.espn.com</b>: needed to read the two cookies above. That is the complete list. The extension has no access to your tabs, history, other sites, downloads or anything else, and it runs no code in the background.</p>
+
+<h2>Checking for yourself</h2>
+<p>The whole extension is a few short files, published at the source link on the store listing and inside the extension window. If a future version ever asked for more permissions or added a server, that would go against the purpose of this extension; do not accept it.</p>
+
+<h2>On your scoreboard</h2>
+<p>The board stores the two cookies in its own memory, never shows them back on its setup page, and uses them only to request your league data from ESPN. Disconnecting the ESPN account on the board's setup page erases them. Note that the hop from your browser to the board is plain HTTP on your home Wi-Fi, the same way printers and most smart-home devices are set up.</p>
+
+<p style="margin-top:36px;color:#666">Matchup LED is an independent product and is not affiliated with or endorsed by ESPN or The Walt Disney Company.</p>
+</body>
+</html>

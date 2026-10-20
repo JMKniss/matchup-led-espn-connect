@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Matchup LED - ESPN Connect</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<div class="sign">
+  <div class="bulbs"></div><div class="bulbs b"></div>
+  <span class="px title">MATCHUP LED</span>
+  <span class="sub">ESPN CONNECT</span>
+</div>
+
+<main>
+  <!-- state: checking -->
+  <section id="s_checking" class="state">
+    <p class="fine">Looking for your ESPN sign-in in this browser...</p>
+  </section>
+
+  <!-- state: not signed in -->
+  <section id="s_nologin" class="state" hidden>
+    <h2><span class="px">NOT SIGNED IN</span></h2>
+    <p>This browser is not signed in to ESPN.</p>
+    <ol class="steps">
+      <li>Open <b>espn.com</b> and sign in like you normally do.</li>
+      <li>Come back and click this button again.</li>
+    </ol>
+    <button id="b_openespn" class="p">Open espn.com sign-in</button>
+    <p class="fine">The two cookies are only looked at while this little window is open.</p>
+  </section>
+
+  <!-- state: signed in, ready to send -->
+  <section id="s_ready" class="state" hidden>
+    <h2><span class="px">FOUND YOUR SIGN-IN</span></h2>
+    <div class="found">
+      <div class="row"><span class="k">SWID</span><code id="v_swid"></code></div>
+      <div class="row"><span class="k">espn_s2</span><code id="v_s2"></code></div>
+    </div>
+    <label for="addr">Your scoreboard's address (same Wi-Fi)</label>
+    <input id="addr" placeholder="matchupled.local  or  192.168.1.42" autocapitalize="off" autocomplete="off" spellcheck="false">
+    <p class="fine">It is shown on the board's setup page and printed on the card in the box. For the PC demo use <code>localhost:8765</code>.</p>
+    <button id="b_send" class="p">Send to my scoreboard</button>
+    <p class="msg" id="msg"></p>
+  </section>
+
+  <details class="what">
+    <summary>What this does (plain words)</summary>
+    <p>When you click <b>Send</b>, this extension reads two cookies that ESPN already put in your browser when you signed in (<code>espn_s2</code> and <code>SWID</code>) and opens your scoreboard's setup page with them, over your home Wi-Fi. The scoreboard uses them to read your fantasy leagues, the same way the ESPN website does.</p>
+    <p>It never sees or asks for your ESPN password. It sends nothing to anyone but the scoreboard address you typed. It does nothing in the background and has no access to other websites. The source code is public and short enough to read in a few minutes.</p>
+    <p class="fine">ESPN's sign-in cookie lasts about a year. When the board's setup page says the ESPN sign-in has expired, sign in to espn.com again and click Send again.</p>
+  </details>
+</main>
+
+<footer>
+  <a id="l_source" href="https://github.com/" target="_blank" rel="noopener">source code</a>
+  <span>&middot;</span>
+  <a id="l_privacy" href="privacy.html" target="_blank" rel="noopener">privacy</a>
+  <span>&middot;</span>
+  <span id="v_ver" class="fine"></span>
+</footer>
+
+<script src="pixfont.js"></script>
+<script src="popup.js"></script>
+</body>
+</html>

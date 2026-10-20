@@ -34,9 +34,7 @@ That is the complete list. It has no access to your tabs, browsing history, down
 
 ## Checking for yourself
 
-The whole extension is a few short files, and all of the logic is in one file of about 100 lines. You're welcome to read it before installing.
-
-The source code will be published in this repository before the extension is released on the Chrome Web Store.
+The whole extension is a few short files, and all of the logic is in one file of about 100 lines. You're welcome to read it before installing. The source is in the [`extension/`](extension/) folder of this repository: [`manifest.json`](extension/manifest.json) lists the permissions and [`popup.js`](extension/popup.js) is the logic. The files in the store listing are these same files, zipped.
 
 ## Install
 
@@ -49,7 +47,7 @@ The scoreboard keeps the two cookies in its own memory and never shows them back
 
 ## Privacy policy
 
-The full privacy policy, with the same points as above in plain words, will be published here with the source code.
+The full privacy policy, with the same points as above in plain words, is [`extension/privacy.html`](extension/privacy.html) (the same page the extension's own footer opens).
 
 ---
 
