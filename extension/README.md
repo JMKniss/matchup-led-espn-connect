@@ -1,6 +1,6 @@
 # Matchup LED - ESPN Connect (browser extension)
 
-One-click way for a Matchup LED owner to give their scoreboard access to private ESPN fantasy leagues.
+Carries a Matchup LED owner's ESPN sign-in from the browser to the scoreboard, so the board can read private ESPN leagues.
 The buyer signs in to espn.com normally, clicks the extension, types the board's address, clicks Send.
 
 ## Files

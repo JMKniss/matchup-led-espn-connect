@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Matchup LED - ESPN Connect",
   "version": "1.0.0",
-  "description": "One click to send your ESPN fantasy sign-in to your Matchup LED scoreboard on your home Wi-Fi. Reads two cookies, nothing else.",
+  "description": "Sends your ESPN fantasy sign-in from this browser to your Matchup LED scoreboard on your home Wi-Fi. Reads two ESPN cookies only.",
   "author": "Jason (Matchup LED)",
   "permissions": [
     "cookies"
