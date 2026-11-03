@@ -11,7 +11,7 @@ The buyer signs in to espn.com normally, clicks the extension, types the board's
 | `popup.html` / `popup.css` / `popup.js` | The little window. All the logic is in `popup.js` (about 100 lines). |
 | `pixfont.js` | The board's 5x5 pixel font, copied from `product/demo/web/pixfont.js`, for the headings. |
 | `privacy.html` | Privacy policy in plain words. Also opened from the popup footer. The store listings need a public URL for this: put the same text on the GitHub repo (or GitHub Pages). |
-| `icons/` | 16/32/48/128 px icons (LED "M"). `make_icons.py` regenerates them (`python make_icons.py`); buyers never need it. |
+| `icons/` | 16/32/48/128 px icons: the cyan bold "M" from the Matchup logo with its letter shading, on an LED dot grid. `make_icons.py` regenerates them (`python make_icons.py`); buyers never need it. |
 
 ## How the hand-off works
 

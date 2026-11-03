@@ -10,7 +10,7 @@
 html,body{margin:0;width:340px;background:var(--ink);color:var(--paper);font:14px/1.45 var(--font)}
 body{background-image:radial-gradient(circle at 1px 1px,#1a1a21 1px,transparent 1.6px);background-size:7px 7px}
 a{color:var(--cyan);text-decoration:none}
-code{color:var(--amber);font-family:var(--font);word-break:break-all}
+code{color:var(--amber);font-family:var(--font);overflow-wrap:anywhere}
 b{color:#fff}
 
 /* pixel type */
@@ -42,7 +42,7 @@ p{margin:0 0 8px}
 .found{background:#000;border:1px solid #22222a;padding:8px 10px;margin-bottom:10px}
 .found .row{display:flex;gap:10px;align-items:baseline;padding:2px 0}
 .found .k{color:var(--mute);font-size:11px;min-width:58px;text-transform:uppercase;letter-spacing:.08em}
-.found code{font-size:12px}
+.found code{font-size:12px;word-break:normal;overflow-wrap:anywhere}
 
 label{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin:6px 0 4px}
 input{width:100%;background:#000;border:1px solid #2a2a32;color:var(--amber);font:15px var(--font);padding:9px 10px;outline:none;

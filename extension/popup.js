@@ -84,7 +84,7 @@ async function init() {
   }
 
   $('v_swid').textContent = mask(found.swid, 6);
-  $('v_s2').textContent = mask(found.s2, 4) + '  (' + found.s2.length + ' characters)';
+  $('v_s2').textContent = mask(found.s2, 4) + '  (' + found.s2.length + ' chars)';
   try { $('addr').value = localStorage.getItem(ADDR_KEY) || ''; } catch (e) { /* storage blocked: fine */ }
   show('s_ready');
   $('addr').focus();
